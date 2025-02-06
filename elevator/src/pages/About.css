@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section5 {
+    width: 100%;
+    height: auto;
+    background-color: #d9eafd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bg-3 {
+    background-image: url(../assets/bg2.webp);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Dark overlay */
+  .bg-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .bg-3 h2 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .bg-3 p{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Fixed button styling */
+  button.btn-outline-light1 {
+    color: #eeeeee;
+    border: 2px solid #eeeeee;
+    background: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 2; 
+    
+  }
+  
+  button.btn-outline-light1:hover {
+    background-color: #eeeeee;
+    color: #8e1616;
+    transform: scale(1.1);
+  }
+  
+  /* Section 2 */
+  .section6 {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    background-color: #d9eafd;
+  }
+  .maindiv{
+    width: 100%;
+    height: auto;
+  }
+  
+  .frame {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .bgimg{
+    width: 50%;
+    height: auto;
+  }
+  .factors{
+    width: 50%;
+    height: auto;
+  }
+  
+  .section6 h1 {
+    color: #1e3a8a;
+    font-size: 2rem;
+  }
+  
+  .section6 .frame p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+      
+  /* Section 3 */
+.section7 {
+  padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: #c3c3c3;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.section7 .section-title {
+  color: #000000;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+/* Ensure the carousel takes full width */
+/* Full-width container */
+/* Full-width container */
+.carousel-container {
+  width: 100%;
+  
+}
+
+/* Individual Slide (Ensures width & spacing) */
+.carousel-item {
+  width: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Slick slide adjustments to ensure proper spacing */
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+/* Ensures uniform image sizes */
+.carousel-img {
+  width: 100%; /* Makes sure it fills the .carousel-item */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-img2{
+  width: 100%; /* Makes sure it fills the .carousel-item */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.carousel-img:hover, .carousel-img2:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 480px) {
+
+  button.btn-outline-light1{
+    width: 200px;
+  }
+  
+}
+
+
+
+
+
+

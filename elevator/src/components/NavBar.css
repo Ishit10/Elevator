@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #9AA6B2;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
+
+/* 🔹 OPTION 1: Fixed Navbar (Always on top) */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* 🔹 OPTION 2: Sticky Navbar (Sticks after scrolling) */
+.navbar.sticky {
+  position: sticky;
+  top: 0;
+}
+
+
+
+/* Navbar Brand Logo */
+.navbar-brand img {
+  height: 50px;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Navigation Item Slide-In Animation */
+.navbar-nav .nav-item {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.navbar-nav .nav-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navbar-nav .nav-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.navbar-nav .nav-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.navbar-nav .nav-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for Slide-In Animation */
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Navbar Link Styling */
+.navbar-nav .nav-link {
+  color: #000;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Navbar Toggler (Mobile Menu) */
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+@media (max-width: 480px) {
+  .navbar-toggler {
+    border-color: white;
+    width: 110px;
+  }
+}

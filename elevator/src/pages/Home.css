@@ -1,0 +1,337 @@
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Apply Cormorant font to all <p> and header tags */
+p, li {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Adjust weight as needed */
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Slightly heavier weight */
+  font-style: normal;
+}
+
+/* Unique Animations for Text */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* section1 */
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #eeeeee;
+  margin: 0;
+}
+
+/* Video Background */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Make sure it stays behind the content */
+}
+
+/* Content Overlay */
+.content-overlay {
+  position: relative;
+  z-index: 1; /* Ensure it stays on top of the video */
+  text-align: center;
+  color: #eeeeee;
+}
+
+.content-overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.content-overlay p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Buttons */
+button.btn-primary {
+  background-color: #d84040;
+  border-color: #d84040;
+  color: #eeeeee;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #0a0606;
+  transform: scale(1.1);
+}
+
+button.btn-outline-light {
+  color: #eeeeee;
+  border: 2px solid #eeeeee;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  width: 150px;
+  height: 47px;
+}
+
+button.btn-outline-light:hover {
+  background-color: #eeeeee;
+  color: #8e1616;
+  transform: scale(1.1);
+}
+
+/* Section 2 */
+.section2 {
+  padding: 3rem 2rem;
+  background-color: #D9EAFD;
+  overflow: hidden; /* Prevents overflow during animation */
+}
+
+.frame {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.section2 h1 {
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Paragraph Animation */
+.section2 .frame p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Image Container */
+.bgimg {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  animation: scaleUp 1s ease-in-out forwards;
+}
+
+.bgimg img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bgimg img:hover {
+  transform: scale(1.05);
+}
+
+/* Animated Button */
+.btn-primary {
+  background-color: #1e3a8a;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  width: 150px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  background-color: #15306d;
+}
+
+/* section 3 */
+.section3 {
+  width: 100%;
+  height: auto;
+  background-color: #D9EAFD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-2 {
+  background-image: url(../assets/ALTURA_PLA.webp);
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.bg-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 1;
+}
+
+.bg-2 h2,
+.bg-2 p {
+  position: relative;
+  z-index: 2;
+  color: white; /* Ensure text color is white for better visibility */
+  text-align: center;
+}
+
+/* section 4 */
+.section4 {
+  width: 100%;
+  height: auto;
+  background-color: #D9EAFD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  padding: 1.5rem;
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .section1 h1 {
+    font-size: 2rem;
+  }
+
+  .section1 p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+  }
+
+  button {
+    width: 80%;
+    margin: 5px auto;
+  }
+
+  .section2 {
+    flex-direction: column;
+  }
+
+  .bgimg {
+    width: 100%;
+  }
+
+  .frame {
+    text-align: center;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bg-2 {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section1 {
+    height: 80vh;
+  }
+
+  .section1 h1 {
+    font-size: 1.8rem;
+  }
+
+  .section1 p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .section2 {
+    padding: 2rem 1rem;
+  }
+  
+
+  .bg-2 {
+    height: 350px;
+    padding: 10px;
+  }
+
+  .bg-2 h2,
+  .bg-2 p {
+    font-size: 1rem;
+  }
+
+  .product {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
