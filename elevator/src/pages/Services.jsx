@@ -70,28 +70,17 @@ const Services = () => {
     AOS.init({ duration: 1200 });
   }, []);
 
-  const handleDownloadBrochure = async () => {
-    const brochureUrl = "http://localhost:5173/Brochure.pdf"; 
+  const handleDownloadBrochure = () => {
+    const brochureUrl = "/Brochure.pdf"; // Relative path to public folder
   
-    try {
-      const response = await fetch(brochureUrl);
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = brochureUrl;
+    link.target = "_blank"; // Opens in a new tab
+    link.download = "Brochure.pdf"; // Ensures it downloads properly
   
-      const link = document.createElement("a");
-      link.href = url;
-      link.target = "_blank"; // Opens in a new tab
-      link.download = "brochure.pdf"; // Ensures it downloads properly
-  
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      // Clean up the object URL
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Error downloading brochure:", error);
-    }
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
 
